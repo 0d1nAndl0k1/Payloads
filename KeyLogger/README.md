@@ -2,7 +2,7 @@
 
 ### Description:
 
-#### 1: TimeBomb_KeyLogger.ino:<br>
+#### 1: KeyLogger.ino:<br>
 A Keylogger based on powershell. Works by dropping payload in temporary dir and executing it in background. Records keystrokes for set time. 
 After time runs out it send the recorded keystrokes to the webhook.site and deletes all the keylogger data from the temporary directory. <br>Please note it is now detectable by most Anti-virus programs. Only way to make it undetectable is to obfuscate the payload.<br>
 
